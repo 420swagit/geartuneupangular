@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HousingLocationComponent } from '../housing-location/housing-location.component';
+import {HousingLocationComponent} from '../housing-location/housing-location.component';
+import { HousingLocation } from '../housinglocation';
 
 @Component({
   selector: 'app-home',
@@ -23,5 +24,14 @@ import { HousingLocationComponent } from '../housing-location/housing-location.c
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+    housingLocation: HousingLocation = {
+      id: 1,
+      name: 'The Bay Club',
+      city: 'Tampa',
+      state: 'FL',
+      photo: 'https://s3.amazonaws.com/ionic-io-static/3e3b0f8e-ionic-io_ionic-view-1.jpg',
+      availableUnits: 3,
+      wifi: true,
+      laundry: true
+    }
 }
